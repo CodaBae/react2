@@ -9,7 +9,8 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <Navber />
+            <Navber />
+
      <Routes>
         <Route path='/' Component={Home} />
         <Route path='/home' Component={Home} />

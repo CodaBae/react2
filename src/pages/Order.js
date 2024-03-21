@@ -1,7 +1,34 @@
-const Order = () =>{
-    return(
-        <h1>This is order page</h1>
-    )
-}
+import Form from "../components/Form";
+import CartProduct from "../components/CartProduct";
+import Breakdown from "../components/Breakdown";
 
-export default Order
+const Order = () => {
+  return (
+
+      <>
+      <div id="order_container">
+        <div id="order_first">
+          <Form />
+        </div>
+
+        <div id="order_second">
+          <CartProduct />
+          <CartProduct />
+          <CartProduct />
+
+          <div>
+            <Breakdown />
+          </div>
+
+          
+        </div>
+      </div>
+
+     
+      
+      </>
+
+  );
+};
+
+export default Order;

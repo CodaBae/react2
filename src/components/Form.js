@@ -5,11 +5,11 @@ import Button from "./Button";
 const Form = () => {
   return (
     <form id="form_area">
-      <Input name={"City"} isHalf={true} />
-      <Input name={"Address"} isHalf={false} />
-      <Input name={"Name"} isHalf={false} />
-      <Input name={"Phone"} isHalf={false} />
-      <Input name={"Email"} isHalf={false} />
+      <Input name={"City"} isHalf={true} showLabel={true}/>
+      <Input name={"Address"} isHalf={false} showLabel={true}/>
+      <Input name={"Name"} isHalf={false} showLabel={true}/>
+      <Input name={"Phone"} isHalf={false} showLabel={true}/>
+      <Input name={"Email"} isHalf={false} showLabel={true}/>
 
       <h1> Payment Method</h1>
 

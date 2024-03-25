@@ -1,16 +1,15 @@
-import Foto1 from "../assets/Foto1.png";
 
-
-const CartProduct = () => {
+const CartProduct = ({item}) => {
+  console.log(item)
   return (
     <div id="cart_area">
       <div className="cart_first">
-        <img src={Foto1} />
+        <img src={item.image} alt='product'/>
       </div>
       <div className="cart_second">
         <div>
-          <h1 style={{marginTop:0}}>Jacket KLS</h1>
-          <p>Collection: KLASSIK OF FABLE</p>
+          <h1 style={{marginTop:0}}>{item.name}</h1>
+          <p>Collection: {item.name}</p>
           <p>Article: H0522001</p>
         </div>
 
@@ -27,7 +26,7 @@ const CartProduct = () => {
         </div>
 
         <div className="flexB">
-          <p>Price: #105</p>
+          <p>Price: #0{item.price}</p>
           <p> Delete</p>
         </div>
       </div>

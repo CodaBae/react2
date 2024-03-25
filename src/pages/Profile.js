@@ -1,6 +1,14 @@
+import Bonus from '../assets/bonus.png'
+import RecentOrders from '../components/RecentOrders'
 const Profile = () =>{
     return(
-        <h1>This is Profile  page</h1>
+        <div id='profile_container'>
+            <h1>Hello, Shalom!</h1>
+
+            <img src={Bonus} alt='bonus'/>
+
+            <RecentOrders />
+        </div>
     )
 }
 

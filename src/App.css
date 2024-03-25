@@ -65,8 +65,9 @@ nav p {
 #input_container input{
 
   border: 1px solid #080B13;
-  padding: 10px;
+  padding: 0 10px;
   margin-bottom: 26px;
+  height: 50px;
 
 }
 
@@ -146,4 +147,50 @@ width: 40%;
 .flexB{
   display: flex;
   justify-content: space-between;
+}
+
+#breakdown_container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 36px;
+
+}
+
+#breakdown_container #breakdown_sub{
+width: 60%;
+}
+
+#breakdown_container button{
+  width: 150px;
+  height: 50px;
+}
+#profile_container {
+  margin-left: 5%;
+
+}
+#profile_container img{
+  width: 335px;
+}
+
+#recent_orders_container div{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+#heading_one{
+  width: 20%;
+}
+
+#heading_two{
+  width: 40%;
+}
+
+#heading_three{
+  width: 20%;
+}
+
+#heading_four{
+  width: 20%;
 }

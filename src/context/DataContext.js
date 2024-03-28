@@ -1,16 +1,11 @@
 import { createContext, useContext, useState, useEffect } from "react";
-
-import Foto1 from "../assets/Foto1.png";
-import Foto2 from "../assets/Foto2.png";
-import Foto3 from "../assets/Foto3.png";
-
 import axios from "axios";
 
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const baseURL = "https://react2node.onrender.com";
-  const [cartData, setCartData] = useState([]);
+    const baseURL = process.env.REACT_APP_BASE_URL;
+    const [cartData, setCartData] = useState([]);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {

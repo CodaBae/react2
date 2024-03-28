@@ -1,6 +1,18 @@
+import { useData } from "../context/DataContext";
+
 
 const CartProduct = ({item}) => {
-  console.log(item)
+  const { setCartData, cartData} = useData();
+
+  const handleDelete = (id) => () => {
+   let newCart =  cartData.filter((item)=>{
+      return item._id !== id
+
+    })
+    setCartData(newCart)
+    localStorage.setItem("cartData",JSON.stringify(newCart))
+  }
+
   return (
     <div id="cart_area">
       <div className="cart_first">
@@ -26,8 +38,8 @@ const CartProduct = ({item}) => {
         </div>
 
         <div className="flexB">
-          <p>Price: #0{item.price}</p>
-          <p> Delete</p>
+          <p>Price: #{item.price}</p>
+          <button onClick={handleDelete(item._id)}> Delete </button>
         </div>
       </div>
     </div>

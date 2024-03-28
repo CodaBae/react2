@@ -11,7 +11,7 @@ const ProductView = () => {
   const addToCart = () => {
     setCartData([ ...[state.productItem,...cartData]])
     navigate('/orders')
-
+    localStorage.setItem("cartData",JSON.stringify([ ...[state.productItem,...cartData]]))
   };
 
   return (
@@ -24,7 +24,7 @@ const ProductView = () => {
         <button onClick={addToCart}>Add to cart</button>
 
         <p>Product Info</p>
-        <p>{state.productItem.des}</p>
+        <p>{state.productItem.desc}</p>
       </div>
     </div>
   );
